@@ -1,0 +1,59 @@
+	textarea {
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+    }
+	
+.container {
+	display: flex;
+	gap: 15px; /* Adds space between the two elements */
+	}
+	
+.tabs-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Hide the actual radio buttons */
+.tabs-container input[type="radio"] {
+  display: none;
+}
+
+/* Style the tab labels like buttons */
+.tabs-container label {
+  flex: 1;
+  padding: 10px;
+  background: #eee;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+/* Hide all content panels by default */
+.tabs-container .tab-content {
+  display: none;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+/* Show Panel 1 and highlight Tab 1 when #tab-1 is checked */
+#tab-1:checked ~ .content-1 {
+  display: block;
+}
+#tab-1:checked + label {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* Show Panel 2 and highlight Tab 2 when #tab-2 is checked */
+#tab-2:checked ~ .content-2 {
+  display: block;
+}
+#tab-2:checked + label {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}

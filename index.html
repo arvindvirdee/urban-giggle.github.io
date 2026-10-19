@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paragraphs to JRXML</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Text Input</h2>
+
+  
+<div class="tabs-container">
+  <!-- Tab 1 Radio & Label -->
+  <input type="radio" name="tab-group" id="tab-1" checked>
+  <label for="tab-1">Text Input</label>
+
+  <!-- Tab 2 Radio & Label -->
+  <input type="radio" name="tab-group" id="tab-2">
+  <label for="tab-2">JRXML Template</label>
+
+  <!-- Content Panel 1 -->
+  <div class="tab-content content-1">
+  	  <p>Enter your paragraphs in here separated by carriage returns...</p>
+	  <textarea id="inputText"></textarea>
+  </div>
+
+  <!-- Content Panel 2 -->
+  <div class="tab-content content-2">
+    <p>Template for the bands you wish to make</p>
+	<textarea width = "100px" id="jasperText"></textarea>
+	<p>Make sure the CData bit contains text [PLACEHOLDER] and the guid bit says [guid]</p>
+  </div>
+</div>
+<button onclick="processBodyText()">Turn To Bands</button>
+<div>
+  <h2>Formatted Output (JRXML)</h2>
+  <p>Copy-paste the text below into the source, directly beneath the closing </band> tag of the band you want it to appear beneath</p>
+  <p>Hot tip: put something distinctive (e.g. "BAZINGA") in this band so you can Ctrl+F it in the source</p>
+  <textarea id="outputText"></textarea>
+</div>
+</body>
+
+<script src="TextToBandswithFrames_js.js"></script>
+</html>
